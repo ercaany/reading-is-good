@@ -1,0 +1,6 @@
+spring:
+  data:
+    mongodb:
+      host: rig-mongo
+      port: 27017
+      database: rig-mongodb

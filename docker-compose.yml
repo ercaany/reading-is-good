@@ -1,0 +1,29 @@
+version: "3.9"
+services:
+
+  java:
+    build:
+      context: ./
+    ports:
+      - "8080:8080"
+    container_name: rig-api
+    links:
+      - rig-mongo
+    depends_on:
+      - rig-mongo
+    networks:
+      - shared-net
+
+  rig-mongo:
+    image: 'mongo'
+    ports:
+      - 27017:27017
+    container_name: rig-mongo
+    volumes:
+      - /home/sinoed/data/db:/data/db
+    networks:
+      - shared-net
+
+networks:
+  shared-net:
+    driver: bridge
