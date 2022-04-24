@@ -17,8 +17,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class AuthController extends BaseController {
   private final AuthService authService;
 
-  @PostMapping("/login")
-  public ApiResponse<AuthResponse> login(@RequestBody AuthRequest request) {
+  @PostMapping
+  public ApiResponse<AuthResponse> authenticate(@RequestBody AuthRequest request) {
     final String jwt = authService.authenticate(request.getUsername(), request.getPassword());
 
     return respond(new AuthResponse(request.getUsername(), jwt));

@@ -21,7 +21,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
   private final JwtRequestFilter jwtRequestFilter;
 
   private static final String[] PERMIT_ALL_AUTH_WHITELIST = {
-    "/v3/api-docs/**", "/swagger-ui/**", "/auth/login"
+    "/v3/api-docs/**", "/swagger-ui/**", "/auth"
   };
 
   private static final String[] POST_METHOD_AUTH_WHITELIST = {"/customers"};

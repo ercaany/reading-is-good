@@ -30,7 +30,7 @@ public class BaseIntegrationTest {
 
     ResponseEntity<ApiResponse<AuthResponse>> response =
         testRestTemplate.exchange(
-            "/auth/login", HttpMethod.POST, new HttpEntity<>(authRequest), typeReference);
+            "/auth", HttpMethod.POST, new HttpEntity<>(authRequest), typeReference);
 
     assertThat(response.getBody()).isNotNull();
     String token = response.getBody().data().token();

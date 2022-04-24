@@ -22,7 +22,7 @@ public class OrderServiceImpl implements OrderService {
   private final BookService bookService;
 
   @Override
-  @Transactional
+  @Transactional /*TransactionManager yok..*/
   public Order create(Order order) {
     Long currentStockCount = bookService.getStockCountById(order.getBookId());
     if (order.getItemCount() > currentStockCount) {
