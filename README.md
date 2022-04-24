@@ -15,15 +15,16 @@ ReadingIsGood is an online books retail firm which operates only on the Internet
 # How To Use?
 MongoDB And Spring Boot app are dockerized therefore we have to run these commands in order to run our application.
 
-Spring Boot app will be running on port 8080 and MongoDB will be up on port 27017
-
-Swagger documentation will be available at [Swagger](http://localhost:8080/swagger-ui/index.html)
-
 `mvn -DskipTests=true  package`
 
 `docker-compose build`
 
 `docker-compose up -d`
+
+Spring Boot app will be running on port 8080 and MongoDB will be up on port 27017
+
+Swagger documentation will be available at [Swagger](http://localhost:8080/swagger-ui/index.html)
+
 
 # Available Endpoints
 
