@@ -37,7 +37,7 @@ public class OrderController extends BaseController {
   }
 
   @GetMapping
-  public ApiResponse<DataResponse<OrderResponse>> findOrderById(
+  public ApiResponse<DataResponse<OrderResponse>> findOrderByDateInterval(
       @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime startDate,
       @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime endDate) {
     return respond(
