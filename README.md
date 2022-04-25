@@ -37,7 +37,7 @@ Swagger documentation will be available at [Swagger](http://localhost:8080/swagg
 Details are available on Swagger!
 
 # Security
-To secure endpoints **Jwt Token & Spring Security** are used.
+To secure endpoints **Jwt & Spring Security** are used.
 
 # Authentication
 
